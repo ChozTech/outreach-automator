@@ -1,0 +1,94 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  background: #0d1117;
+  color: white;
+}
+
+.stars, .twinkling {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+.stars {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
+  animation: moveStars 200s linear infinite;
+}
+
+.twinkling {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/twinkling.png') repeat;
+  animation: moveTwinkling 100s linear infinite;
+}
+
+@keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 5000px;}
+}
+
+@keyframes moveTwinkling {
+  from {background-position: 0 0;}
+  to {background-position: 10000px 5000px;}
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 600px;
+  margin: 10vh auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #3dbfff;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: linear-gradient(135deg, #3dbfff, #005eff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#playbookOutput {
+  margin-top: 30px;
+  background: #121921;
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
